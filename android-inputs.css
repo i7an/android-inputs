@@ -5,19 +5,51 @@ body {
 
 #holder {
 	width: 100%;
+	overflow: hidden;
+	background-color: #e9e9e9;
+	font-family: 'Droid Sans', arial, serif;
+	font-size: 16px;
+}
+
+.fields-wrapper {
+	margin: 20px;
+}
+
+input, select {
+	font-size: 20px;
+}
+
+#holder h3 {
+	text-transform: uppercase;
+	width: 100%;
+	text-align: center;
 }
 
 #holder > div {
 	clear: both;
-	padding: 2%;
-	margin-bottom: 20px;
-	border-bottom: 1px solid #eee;
+	padding: 0 50px;
 	float: left;
 	width: 96%;
 }
 
 label {
 	display: inline;
+}
+
+.text-blue {
+	color: #33a9d2;
+}
+
+.text-bold {
+	font-weight: bold;
+}
+
+label.text-bold {
+	color: #333333;
+}
+
+label.text-bold .text-blue {
+	font-size: 24px;
 }
 
 /*Base styles*/
@@ -53,7 +85,7 @@ label {
 }
 
 .android-checkbox + label {
-	margin-bottom: -9px;
+	margin-bottom: -4px;
 }
 
 .android-checkbox:checked + label:after {
@@ -77,63 +109,109 @@ label {
 .android-radio:checked + label:after {
 	content: '\25CF';
 	font-size: 28px;
-	top: -9px;
-	left: 0;
+	top: -8px;
+	left: 1px;
+}
+
+.radio-holder {
+	margin: 20px;
+	margin-bottom: 0;
+}
+
+.radio-holder span {
+	border-bottom: 1px solid #d9dde1;
+	padding: 5px;
+	color: #333333;
 }
 
 /*Text field styles*/
 
 .android-text {
-	float: left;
+	width: 246px;
+	position: relative;
 }
 
 .android-text input {
-	outline: none;
+	width: 229px;
+	height: 24px;
 	border: none;
+	border-bottom: 1px solid #a3a3a3;
 	background: transparent;
-	display: block;
-	bottom: 0.8em;
-	margin: 0 8px;
-	font-size: 20px;
+	padding: 0 8px;
+	margin: 0 0 1px 0;
+	color: black;
+	font-family: 'Droid Sans', arial, serif;
+	font-size: 16px;
 }
 
-.android-text input:focus + .android-bottom {
-	border: solid 1px #26A0C7;
-	border-top: 0;
-	box-shadow: 0px 1px 1px #26A0C7;
+.android-text input::-webkit-input-placeholder { color: #808080; }
+.android-text input:-moz-placeholder { color: #808080; }
+.android-text input:-ms-input-placeholder { color: #808080; }
+
+.android-text input:focus {
+	outline: none;
 }
 
-.android-text .android-bottom {
-	border: solid 1px #B3B3B3;
-	border-top: 0;
-	overflow: visible;
-	max-height: 0.2em;
-	display: block;
-	padding: 2px;
-	margin-top: 3px;
+.android-text input:focus + .left {
+	background: #0099cc;
+	box-shadow: 0 0 1px #0099cc;
+}
+
+.android-text input:focus ~ .right {
+	background: #0099cc;
+	box-shadow: 0 0 1px #0099cc;
+}
+
+.android-text input:focus {
+	border-bottom: 1px solid #0099cc;
+	box-shadow: 0 1px 1px -1px #0099cc;
+}
+
+.android-text .left {
+	position: absolute;
+	bottom: 1px;
+	left: 0;
+	background: #a3a3a3;
+	width: 1px;
+	height: 4px;
+}
+
+.android-text .right {
+	position: absolute;
+	bottom: 1px;
+	right: 0;
+	background: #a3a3a3;
+	width: 1px;
+	height: 4px;
 }
 
 /*Select*/
 
 .android-select {
-	-webkit-appearance: none;
-	outline: none;
-	padding: 5px;
-	background: transparent;
-	border: 0;
-	border-bottom: solid 1px #B3B3B3;
-	font-size: 20px;
-	color: #333333;
-	min-width: 150px;
+	position: relative;
+	width: 260px;
 }
 
-.android-select + label:after {
-	content: '\25E2';
-	font-size: 22px;
-	position: relative;
-	top: 11px;
-	left: -23px;
-	color: #B3B3B3;
+.android-select select {
+	-webkit-appearance: none;
+	outline: none;
+	height: 25px;
+	width: 245px;
+	padding: 0 4px 3px 4px;
+	margin: 0;
+	background: transparent;
+	border: 0;
+	border-bottom: solid 1px #7c7c7c;
+	color: black;
+	font-family: 'Droid Sans', arial, serif;
+	font-size: 16px;
+	background-image: -webkit-gradient(
+		linear,
+		right bottom,
+		233 13,
+		color-stop(0.5, #7c7c7c),
+		color-stop(0.5, transparent)
+	);
 }
 
 /*Tag*/
@@ -152,45 +230,4 @@ label {
 
 .button-holder {
 	float: left;
-}
-
-/* ------- IGNORE */
-
-#header {
-	width: 100%;
-	margin: 0px auto;
-}
-
-#header #center {
-	text-align: center;
-}
-
-#header h1 span {
-	color: #000;
-	display: block;
-	font-size: 50px;
-}
-
-#header p {
-	font-family: 'Georgia', serif;
-}
-#header h1 {
-	color: #892dbf;
-	font: bold 40px 'Bree Serif', serif;
-}
-
-#travel {
-	padding: 10px;
-	background: rgba(0,0,0,0.6);
-	border-bottom: 2px solid rgba(0,0,0,0.2);
-	font-variant: normal;
-	text-decoration: none;
-	margin-bottom: 20px;
-}
-
-#travel a {
-	font-family: 'Georgia', serif;
-	text-decoration: none;
-	border-bottom: 1px solid #f9f9f9;
-	color: #f9f9f9;
 }
