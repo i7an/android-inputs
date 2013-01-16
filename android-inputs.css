@@ -188,12 +188,11 @@ label.text-bold .text-blue {
 /*Select*/
 
 .android-select {
-	position: relative;
-	width: 260px;
-}
-
-.android-select select {
+	/*appearance: none;*/
 	-webkit-appearance: none;
+	/*-moz-appearance: none;*/
+	/*-o-appearance: none;*/
+	/*-ms-appearance: none;*/
 	outline: none;
 	height: 25px;
 	width: 245px;
@@ -203,15 +202,12 @@ label.text-bold .text-blue {
 	border: 0;
 	border-bottom: solid 1px #7c7c7c;
 	color: black;
-	font-family: 'Droid Sans', arial, serif;
+	/*background-image: linear-gradient(135deg, #7c7c7c 8px, transparent 0);*/
+	background-image: -webkit-linear-gradient(135deg, #7c7c7c 8px, transparent 0);
+	/*background-image: -moz-linear-gradient(135deg, #7c7c7c 8px, transparent 0);*/
+	/*background-image: -o-linear-gradient(135deg, #7c7c7c 8px, transparent 0);    */
 	font-size: 16px;
-	background-image: -webkit-gradient(
-		linear,
-		right bottom,
-		233 13,
-		color-stop(0.5, #7c7c7c),
-		color-stop(0.5, transparent)
-	);
+	font-family: 'Droid Sans', arial, serif;
 }
 
 /*Tag*/
