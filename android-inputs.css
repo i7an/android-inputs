@@ -5,7 +5,7 @@ body {
 
 .android-form {
 	padding: 19px;
-	background: #e9e9e9;
+	background: #efefef;
 }
 
 .android-form legend {
@@ -253,6 +253,14 @@ label.text-bold .text-blue {
 	/*background-image: -o-linear-gradient(135deg, #7c7c7c 8px, transparent 0);    */
 	font-size: 16px;
 	font-family: 'Droid Sans', arial, serif;
+}
+
+/*Button*/
+.android-button {
+	font-size: 16px;
+	font-family: 'Droid Sans', arial, serif;
+	color: black;
+	padding: 8px 10px;
 }
 
 /*Tag*/
