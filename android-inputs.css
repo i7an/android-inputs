@@ -272,13 +272,17 @@ label.text-bold .text-blue {
 	border-radius: 1px;
 }
 
+.android-button:hover {
+	background: rgba(153, 153, 153, 0.6);
+}
+
 .android-button:active {
 	background: rgba(51, 181, 229, 0.88);
 	border-color:
 					rgba(107, 201, 237, 0.91)
 					rgba(49, 175, 221, 0.88)
 					rgba(41, 187, 183, 0.9)
-					rgba(49, 175, 221, 0.88);	
+					rgba(49, 175, 221, 0.88);
 }
 
 /*Tag*/
