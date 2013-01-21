@@ -260,11 +260,28 @@ label.text-bold .text-blue {
 	font-size: 16px;
 	font-family: 'Droid Sans', arial, serif;
 	color: black;
+	background: rgba(153, 153, 153, 0.4);
 	padding: 8px 10px;
+	border-color:	
+					rgba(207, 207, 207, 0.58)
+					rgba(132, 132, 132, 0.44)
+					rgba(63, 63, 63, 0.62)
+					rgba(132, 132, 132, 0.62);
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 1px;
+}
+
+.android-button:active {
+	background: rgba(51, 181, 229, 0.88);
+	border-color:
+					rgba(107, 201, 237, 0.91)
+					rgba(49, 175, 221, 0.88)
+					rgba(41, 187, 183, 0.9)
+					rgba(49, 175, 221, 0.88);	
 }
 
 /*Tag*/
-
 .tag {
 	font-family: Arial, sans-serif;
 	font-size: 20px;
